@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- metas and lynks -->
+  <%- include('../partials/metasBasics') %>
+    <!-- metas and lynks -->
+    <link rel="stylesheet" href="/css/product/detalle.css" />
+    <link rel="stylesheet" href="/css/product/componentCard.css">
+    <title>Detalles</title>
+</head>
+
+<body>
+  <!-- header -->
+  <%- include('../partials/header') %>
+    <!-- header -->
+    <main>
+      <div class="container-detail">
+        <div class="div-marca">
+          <a class="marca" href="/product/detail/<%= product.id %>"></a>
+        </div>
+        <div class="nombre">
+          <%= product.name %>
+        </div>
+        <div class="img">
+          <img src="/img/products/<%= product.image %> " alt="">
+        </div>
+        <div class="precio">
+          $ <%= product.price %>
+        </div>
+        <% if ( locals.isLogged && (userLogged.type_id==1 || userLogged.type_id==3)) { %>
+          <a class="btn-editar" href="/product/update/<%= product.id %>">EDITAR</a>
+          <form action="/product/<%= product.id %>?_method=DELETE" method="POST">
+            <button class="btn-eliminar" type="submit">ELIMINAR</button>
+          </form>
+
+          <% } else { %>
+            <form action="/product/agregar/<%= product.id %>" method="GET">
+            <button class="btn-agregar" type="submit">AGREGAR AL CARRITO</button>
+            </form>
+            <% } %>
+
+      </div>
+      
+      <section class="interes">
+        <div class="title-interes">
+          TE PUEDE INTERESAR
+        </div>
+
+        <% if (locals.products) { %>
+          <%- include('../partials/componentCard',{ products }) %>
+            <% }%>
+
+
+      </section>
+
+    </main>
+
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+      <!-- footer -->
+
+</body>
+
+</html>

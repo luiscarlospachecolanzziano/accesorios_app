@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <!-- metas and lynks -->
+  <%- include('../partials/metasBasics') %>
+    <!-- metas and lynks -->
+
+    <link rel="stylesheet" href="/css/product/categories.css">
+
+    <link rel="stylesheet" href="/css/product/componentCard.css">
+    <title>Categorías</title>
+</head>
+
+<body>
+
+  <!-- header -->
+  <%- include('../partials/header') %>
+    <!-- header -->
+
+    <main>
+
+      <form class="formSearch" action="/product/categories" method="POST">
+        <input name="search" type="text" class="bar2" placeholder="Buscar">
+        <button class="btnSearch" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+
+      <form class="form-filters" action="/product/filtrar" method="post">
+
+        <div class="title-form">Filtrar y/o ordenar</div>
+        <div class="filter">
+          <snap class="title">Ordenar Por Precio</snap>
+          <div class="item">
+            <label for="mayor">Mayor a menor</label>
+            <input type="radio" id="mayor" name="filtro" value="mayor">
+          </div>
+          <div class="item">
+            <label for="menor">Menor a mayor</label>
+            <input type="radio" id="menor" name="filtro" value="menor">
+          </div>
+        </div>
+        <input class="btn-filtrar" type="submit" value="Filtrar">
+      </form>
+
+      <section class="content-cels">
+        <div class="title-cels">
+          PRODUCTOS
+        </div>
+
+
+        <% if (locals.products) { %>
+                <%- include('../partials/componentCard',{products})  %> 
+        <% } %>
+
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+      <!-- footer -->
+
+
+</body>
+</html>
