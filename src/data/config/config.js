@@ -11,6 +11,7 @@ module.exports={
     "password": DB_PASSWORD,
     "database": DB_NAME,
     "host": DB_HOST,
+    "port":DB_PORT,
     "dialect": "mysql"
   },
   "test":{
@@ -25,6 +26,7 @@ module.exports={
     "password": DB_PASSWORD,
     "database": DB_NAME,
     "host": DB_HOST,
+    "port":DB_PORT,
     "dialect": "mysql"
   }
 }
