@@ -56,7 +56,7 @@ CREATE TABLE `products` (
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 INSERT INTO `products` (`id`, `name`, `price`, `category_id`, `image`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
-(1, 'Pulsera tejida', 15000, 2, '1690381095309.png', NULL, '2023-07-26', NULL),
+(1, 'Pulsera tejida', 15000, 2, 'pulseratejida.png', NULL, '2023-07-26', NULL),
 (2, 'Correa', 26000, 3, 'correa.png', NULL, NULL, NULL),
 (3, 'Sombrero', 50000, 2, 'sombrero.png', NULL, NULL, NULL),
 (4, 'Camisa', 38000, 1, 'camisa.png', NULL, NULL, NULL);
