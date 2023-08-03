@@ -16,6 +16,10 @@ app.use(cors())
 app.use(express.static(path.resolve('public')))
 //Para las sesiones
 app.use(session({
+    store: new FileStore({
+        // Configuración adicional opcional
+        path: '/session',
+      }),
     secret: "secreto",
     resave: false,
     saveUninitialized: false,
