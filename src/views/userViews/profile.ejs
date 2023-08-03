@@ -13,18 +13,14 @@
 	<!-- metas and lynks -->
     <%- include('../partials/header') %>
 	<!--perfil y logout -->
-
-
 	<!-- Container -->
 	<main>
-
 		<div class="contentProfile">
             <form class="formUpdate" action="/user/profile" method="POST" enctype="multipart/form-data">
                 <div class="titleProfile">INFORMACIÓN PERSONAL</div>
                 <img class="imgProfile" src="/img/users/<%= locals.user.image %> ">
 				<br>
 				<br>
-
                 <div class="errorsList">
 					<% if (typeof errorsList !='undefined') { %>
                     <% errorsList.forEach(element => { %>
