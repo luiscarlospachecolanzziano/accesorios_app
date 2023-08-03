@@ -7,6 +7,7 @@ const cors = require('cors')
 const path=require('path');
 //Inicializamos 
 const app= express()
+const FileStore = require('session-file-store')(session);
 //Variable para acceder a las rutas
 //cors, para ocupar el api del backend
 app.use(cors())
