@@ -1,7 +1,7 @@
-const DB_HOST = process.env.DB_HOST || "containers-us-west-174.railway.app";
-const DB_NAME = process.env.DB_NAME || "railway";
-const DB_PASSWORD = process.env.DB_PASSWORD || "l7g6hxzfagHYoIlc8nkW";
-const DB_PORT = process.env.DB_PORT || "7427";
+const DB_HOST = process.env.DB_HOST || "127.0.0.1";
+const DB_NAME = process.env.DB_NAME || "bd_project_sprints";
+const DB_PASSWORD = process.env.DB_PASSWORD || "";
+const DB_PORT = process.env.DB_PORT || "3306";
 const DB_USER = process.env.DB_USER || "root";
 
 
