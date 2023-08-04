@@ -190,7 +190,7 @@ const user = {
                 id: element.id,
                 nick: element.nick,
                 email: element.email,
-                detail: 'http://accesoriosapp-production.up.railway.app/user/api/'+element.id
+                detail: 'https://accesoriosapp-production.up.railway.app/user/api/'+element.id
             }
             ListadoDetails.push(user)
         });
@@ -198,7 +198,7 @@ const user = {
             meta: {
                 status: 200,
                 total: listado.length,
-                url: 'http://accesoriosapp-production.up.railway.app/user/api/list',
+                url: 'https://accesoriosapp-production.up.railway.app/user/api/list',
                 method: 'GET'
             },
             data: ListadoDetails
@@ -211,7 +211,7 @@ const user = {
             meta: {
                 status: 200,
                 total: 1,
-                url: 'http://accesoriosapp-production.up.railway.app/user/api/:'+req.params.id,
+                url: 'https://accesoriosapp-production.up.railway.app/user/api/:'+req.params.id,
                 method: 'GET'
             },
             data: user

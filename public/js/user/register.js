@@ -38,7 +38,7 @@ window.addEventListener('load', function () {
                 e.preventDefault()
             }
         }
-        let result= await fetch('http://accesoriosapp-production.up.railway.app/user/api/existEmail',
+        let result= await fetch('https://accesoriosapp-production.up.railway.app/user/api/existEmail',
         {
             method: 'POST',
             headers: 
