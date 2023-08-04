@@ -72,7 +72,7 @@ const product = {
 				let product = await productModel.getProductById(req.params.id)
 
 				//obtener los datos para cargar dinámicamente los selects del html
-				let categories = await fetch('http://localhost:3001/api/categories').then(list => list.json())
+				let categories = await fetch('http://accesoriosapp-production.up.railway.app/api/categories').then(list => list.json())
 
 				// se verifica que haya un resultado
 				if (product) {
@@ -175,7 +175,7 @@ const product = {
 				brand: element.brand ? element.brand.name : '',
 				price: element.price,
 
-				detail: 'http://localhost:3001/product/api/' + element.id
+				detail: 'http://accesoriosapp-production.up.railway.app/product/api/' + element.id
 			}
 			ListDetails.push(product)
 		});
@@ -184,7 +184,7 @@ const product = {
 			meta: {
 				status: 200,
 				total: ProductList.length,
-				url: 'http://localhost:3001/product/api/list',
+				url: 'http://accesoriosapp-production.up.railway.app/product/api/list',
 				method: 'GET'
 			},
 			data: ListDetails
@@ -197,7 +197,7 @@ const product = {
 			meta: {
 				status: 200,
 				total: 1,
-				url: 'http://localhost:3001/product/api/:' + req.params.id,
+				url: 'http://accesoriosapp-production.up.railway.app/product/api/:' + req.params.id,
 				method: 'GET'
 			},
 			data: product
@@ -209,7 +209,7 @@ const product = {
 			meta: {
 				status: 200,
 				total: 1,
-				url: 'http://localhost:3001/product/api/lastProduct',
+				url: 'http://accesoriosapp-production.up.railway.app/product/api/lastProduct',
 				method: 'GET'
 			},
 			data: product
@@ -221,7 +221,7 @@ const product = {
 			meta: {
 				status: 200,
 				total: products.length,
-				url: 'http://localhost:3001/product/api/mostViewed',
+				url: 'http://accesoriosapp-production.up.railway.app/product/api/mostViewed',
 				method: 'GET'
 			},
 			data: products

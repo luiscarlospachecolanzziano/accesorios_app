@@ -1,7 +1,7 @@
 window.addEventListener('load', function () {
 
     let categorySelect = document.getElementById('category')
-    fetch('http://localhost:3001/api/categories')
+    fetch('http://accesoriosapp-production.up.railway.app/api/categories')
         .then(response => response.json())
         .then(categories => {
 
