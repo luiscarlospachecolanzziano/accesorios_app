@@ -37,6 +37,13 @@
 
           <select class="select" name="Category" id="Category">
             <option value="">Categoría:</option>
+            <% if (locals.categories) { %>
+
+              <% categories.forEach(element=> { %>
+                <option <% if (product.Category_id == element.id ) { %>selected<% } %> value="<%= element.id %> "><%= element.name %> </option>
+              <% }) %>
+
+            <% } %>
           </select>
 
           <input type="text" name="price" placeholder="Precio">

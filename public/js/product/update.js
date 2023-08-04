@@ -7,10 +7,7 @@ window.addEventListener('load', function () {
         
         let name = document.getElementById('name').value
         let Category = document.getElementById('Category').value
-        let color = document.getElementById('color').value
-        let mark = document.getElementById('mark').value
-        let memory = document.getElementById('memory').value
-        let ram = document.getElementById('ram').value
+        
         let img = document.getElementById('imgCel').value
         
         let errors = []
@@ -23,22 +20,7 @@ window.addEventListener('load', function () {
             e.preventDefault()
             errors.push('Seleccione una categoría') 
         }
-        if(color == ''){
-            e.preventDefault()
-            errors.push('Seleccione un color')
-        }
-        if(mark == ''){
-            e.preventDefault()
-            errors.push('Seleccione una marca')
-        }
-        if(memory == ''){
-            e.preventDefault()
-            errors.push('Seleccione una memoria')
-        }
-        if(ram == ''){
-            e.preventDefault()
-            errors.push('Seleccione una memoria RAM')
-        }
+    
         if(img != ''){
             let arrImg=img.split('.')
             let extension=arrImg[arrImg.length-1]
