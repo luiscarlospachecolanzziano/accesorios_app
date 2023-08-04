@@ -16,14 +16,14 @@ module.exports={
 	},
 	//Obtener productos por categoría
 	getProductByCategory:async function(cat){
-		let category=await db.Category.findOne({
+		let Category=await db.Category.findOne({
 			where:{
 				name:cat
 			}
 		})
 		let products=await db.Product.findAll({
 			where:{
-				category_id:category.id
+				Category_id:Category.id
 			}
 		})
 		return products

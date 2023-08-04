@@ -17,7 +17,7 @@ const main={
     },
     
     categories:(req,res)=>{
-        db.category.findAll()
+        db.Category.findAll()
         .then(x=>{
             return res.json(x)
         }).catch(e=>{

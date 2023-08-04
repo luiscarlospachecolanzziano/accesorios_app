@@ -1,12 +1,12 @@
 window.addEventListener('load', function () {
     
-    let categorySelect = document.getElementById('category')
+    let CategorySelect = document.getElementById('Category')
     fetch('http://accesoriosapp-production.up.railway.app/api/categories')
         .then(response => response.json())
         .then(categories => {
             
             categories.forEach(element => {
-                categorySelect.innerHTML+=
+                CategorySelect.innerHTML+=
                 `<option value="${element.id}">${element.name}</option>`
             });
 
@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
     form.addEventListener('submit', function (e) {
         
         let name = document.getElementById('name').value
-        let category = document.getElementById('category').value
+        let Category = document.getElementById('Category').value
         let img = document.getElementById('imgCel').value
         
         let errors = []
@@ -26,7 +26,7 @@ window.addEventListener('load', function () {
             e.preventDefault()
             errors.push('El nombre debe tener al menos 5 caracteres')
         }
-        if(category == ''){
+        if(Category == ''){
             e.preventDefault()
             errors.push('Seleccione una categoría') 
         }

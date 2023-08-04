@@ -23,8 +23,8 @@ router.get('/detail/:id',productController.detailView)              //view Detai
 router.post('/register',uploadProduct.single('imgCel'),ValidationRegister,productController.registerProduct)    // add product
 router.put('/:id',uploadProduct.single('imgCel'),productController.updateProduct)//update product
 router.delete('/:id',productController.deleteProduct)      //delete product
-router.post('/categories',productController.categorySearch)      //view Categories
-router.post('/filtrar',productController.categoryFiltrar)      //filtro Categories
+router.post('/categories',productController.CategorySearch)      //view Categories
+router.post('/filtrar',productController.CategoryFiltrar)      //filtro Categories
 
 // EndPoints API
 router.get('/api/list',productController.apiProductList)

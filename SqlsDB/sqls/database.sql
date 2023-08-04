@@ -37,15 +37,15 @@ CREATE TABLE `products` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(60) NOT NULL,
   `price` int NOT NULL,
-  `category_id` int DEFAULT NULL,
+  `Category_id` int DEFAULT NULL,
   `image` varchar(60) NOT NULL,
   `createdAt` date DEFAULT NULL,
   `updatedAt` date DEFAULT NULL,
   `deletedAt` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
-  KEY `fk_Products_Categories1_idx` (`category_id`),
-  CONSTRAINT `fk_Products_Categories1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `fk_Products_Categories1_idx` (`Category_id`),
+  CONSTRAINT `fk_Products_Categories1` FOREIGN KEY (`Category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -55,7 +55,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` (`id`, `name`, `price`, `category_id`, `image`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
+INSERT INTO `products` (`id`, `name`, `price`, `Category_id`, `image`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
 (1, 'Pulsera tejida', 15000, 2, 'pulseratejida.png', NULL, '2023-07-26', NULL),
 (2, 'Correa', 26000, 3, 'correa.png', NULL, NULL, NULL),
 (3, 'Sombrero', 50000, 2, 'sombrero.png', NULL, NULL, NULL),

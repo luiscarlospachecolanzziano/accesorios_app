@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
     form.addEventListener('submit', function (e) {
         
         let name = document.getElementById('name').value
-        let category = document.getElementById('category').value
+        let Category = document.getElementById('Category').value
         let color = document.getElementById('color').value
         let mark = document.getElementById('mark').value
         let memory = document.getElementById('memory').value
@@ -19,7 +19,7 @@ window.addEventListener('load', function () {
             e.preventDefault()
             errors.push('El nombre debe tener al menos 5 caracteres')
         }
-        if(category == ''){
+        if(Category == ''){
             e.preventDefault()
             errors.push('Seleccione una categoría') 
         }

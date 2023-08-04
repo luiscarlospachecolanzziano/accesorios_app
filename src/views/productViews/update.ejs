@@ -30,12 +30,12 @@
 
           <input type="text" name="name" id="name" placeholder="Nombre del producto" value="<%= product.name %>">
           
-          <select class="select" name="category" id="category">
+          <select class="select" name="Category" id="Category">
             <option value="">Categoría:</option>
             <% if (locals.categories) { %>
 
               <% categories.forEach(element=> { %>
-                <option <% if (product.category_id == element.id ) { %>selected<% } %> value="<%= element.id %> "><%= element.name %> </option>
+                <option <% if (product.Category_id == element.id ) { %>selected<% } %> value="<%= element.id %> "><%= element.name %> </option>
               <% }) %>
 
             <% } %>

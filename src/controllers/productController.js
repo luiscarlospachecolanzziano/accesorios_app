@@ -47,7 +47,7 @@ const product = {
 			let newProduct = {
 				"name": req.body.name,
 				"price": req.body.price,
-				"category_id": req.body.category,
+				"Category_id": req.body.Category,
 				"image": nameImg
 			}
 
@@ -98,7 +98,7 @@ const product = {
 			"id": req.params.id,
 			"name": req.body.name,
 			"price": req.body.price,
-			"category_id": req.body.category,
+			"Category_id": req.body.Category,
 		}
 
 		//se obtiene el nombre de la imagen "nueva" si se actualizó
@@ -138,12 +138,12 @@ const product = {
 			res.redirect('/user/login')
 		}
 	},
-	categorySearch: async (req, res) => {
+	CategorySearch: async (req, res) => {
 		let search = req.body.search
 		let products = await productModel.getProductsByName(search)
 		res.render('./productViews/categories', { products })
 	},
-	categoryFiltrar: async (req, res) => {
+	CategoryFiltrar: async (req, res) => {
 		let products = await productModel.getProducts()
 		let filtro = req.body.filtro
 		let mayor = 0

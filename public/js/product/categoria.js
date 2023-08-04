@@ -1,12 +1,12 @@
 window.addEventListener('load', function () {
 
-    let categorySelect = document.getElementById('category')
+    let CategorySelect = document.getElementById('Category')
     fetch('http://accesoriosapp-production.up.railway.app/api/categories')
         .then(response => response.json())
         .then(categories => {
 
             categories.forEach(element => {
-                categorySelect.innerHTML +=
+                CategorySelect.innerHTML +=
                     `<option value="${element.id}">${element.name}</option>`
             });
 
