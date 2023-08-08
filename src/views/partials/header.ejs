@@ -53,9 +53,36 @@
   </div>
   <ul class="mobile-menu">
     <!-- Aquí van los enlaces del menú para dispositivos móviles -->
-    <li><a href="#">Inicio</a></li>
-      <li><a href="#">Productos</a></li>
-      <li><a href="#">Contacto</a></li>
+    <% if ( locals.isLogged && (userLogged.type_id==1 || userLogged.type_id==3)) { %>
+      <li>Hola, <%= userLogged.nick %>
+      </li>
+      <snap class="div-line"></snap>
+      <li> <a href="/product/register">Registrar Producto</a> </li>
+      <snap class="div-line"></snap>
+      <li> <a href="/user/login">Mi cuenta</a> </li>
+      <snap class="div-line"></snap>
+      <li> <a href="/user/logout">Logout</a> </li>
+      <snap class="div-line"></snap>
+      <% }else if ( locals.isLogged) { %>
+
+        <li>Hola, <%= userLogged.nick %>
+        </li>
+        <snap class="div-line"></snap>
+        <li> <a href="/user/login">Mi cuenta</a> </li>
+        <snap class="div-line"></snap>
+        <li> <a href="/user/logout">Logout</a> </li>
+        <snap class="div-line"></snap>
+
+        <% } else { %>
+          <li> <a href="/user/login">Iniciar Sesión</a> </li>
+          <snap class="div-line"></snap>
+          <li><a href="/user/register">Registrarme</a> </li>
+
+        <% } %>  
+
+        <li class="search"><a href="/product/categories"><img src="/img/icons/icon-search.png"></a></li>
+        <li class="carShop"><a href="/product/carrito"><img src="/img/icons/icon-shoppingCart.png"></a></li>
   </ul>
 
 </header>
+<script src="/js/menu.js"></script>

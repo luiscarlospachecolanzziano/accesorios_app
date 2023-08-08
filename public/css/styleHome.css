@@ -5,50 +5,8 @@
     padding: 0px;
     margin: 0px;
     font-family: 'Lato', sans-serif;
+    /* background-color: #FDE5EC; */
 }
-
-/* header */
-
-/* header {
-    background-color: gray;
-    border-bottom:solid 1px #916DB3;
-    
-} */
-
-/* .navBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    top: -1px;
-    background: #FDE5EC;
-    margin-left: 0px;
-    
-} */
-
-/* .menuBurguer {
-color: #FDE5EC;
-
-} */
-
-
-/* .logo {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-} */
-
-/* .logo img {
-    width: 80%;
-}
-.nombreEmpresa {
-    color: #916DB3;
-    font-size: large;
-    text-align: justify;
-    
-} */
 
 .formBusqueda {
     display: flex;
@@ -365,21 +323,26 @@ margin: 20px 0px;
 }
 
 .contentdown-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #916DB3;
     text-align: center;
-    padding: 2px 0;
+    padding: 2px 0px 5px 0px;
     height: 2rem;
-    color: white
+    color: white;
+    margin-bottom: 0;
+    height: 40px;
+    
 }
 
+main{
 
+}
 /* footer */
 
 
 @media (min-width: 768px) {
-    /* .content-right {
-        display: flex;
-    } */
    
 
     .title-destacados {
@@ -427,12 +390,6 @@ margin: 20px 0px;
         margin-bottom: 20px;
     }
 
-    /* .nombreEmpresa {
-        color: #916DB3;
-        font-size: large;
-        text-align: justify;
-    } */
-
 }
 
 
@@ -463,14 +420,6 @@ margin: 20px 0px;
     .up img {
         width: 60%;
     }
-
-    /* .nombreEmpresa {
-        color: #916DB3;
-        font-size: xx-large;
-        text-align: justify;
-        
-    } */
-
-    
+     
 }
 
