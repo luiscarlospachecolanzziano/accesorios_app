@@ -13,7 +13,7 @@ const FileStore = require('session-file-store')(session);
 app.use(cors())
 
 
-//Configuramos la carpeta public
+//Configurada la carpeta public
 app.use(express.static(path.resolve('public')))
 //Para las sesiones
 app.use(session({
@@ -65,3 +65,5 @@ app.use('/user',userRoute)
 
 //Rutas products
 app.use('/product',productRoute)
+
+//identificando
